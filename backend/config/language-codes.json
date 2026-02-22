@@ -1,0 +1,362 @@
+[
+    {
+        "id": "en-US",
+        "code": "en-US",
+        "tts": {
+            "code": "en-US",
+            "voice": "en-US-Neural2-F"
+        },
+        "name": "English"
+    },
+    {
+        "id": "uk-en-GB",
+        "tts": {
+            "code": "en-GB",
+            "voice": "en-GB-Journey-D"
+        },
+        "code": "en-GB",
+        "name": "English"
+    },
+    {
+        "id": "au-en-AU",
+        "code": "en-AU",
+        "tts": {
+            "code": "en-AU",
+            "voice": "en-AU-Standard-B"
+        },
+        "name": "English"
+    },
+    {
+        "id": "in-en-IN",
+        "code": "en-IN",
+        "tts": {
+            "code": "en-IN",
+            "voice": "en-IN-Journey-D"
+        },
+        "name": "English"
+    },
+    {
+        "id": "fr-fr",
+        "code": "fr",
+        "tts": {
+            "code": "fr-FR",
+            "voice": "fr-FR-Neural2-C"
+        },
+        "name": "French"
+    },
+    {
+        "id": "es-es",
+        "code": "es",
+        "tts": {
+            "code": "es-ES",
+            "voice": "es-ES-Neural2-A"
+        },
+        "name": "Spanish"
+    },
+    {
+        "id": "uk-es-US",
+        "code": "es",
+        "tts": {
+            "code": "es-US",
+            "voice": "es-US-Journey-D"
+        },
+        "name": "Spanish"
+    },
+    {
+        "id": "de-de",
+        "code": "de",
+        "tts": {
+            "code": "de-DE",
+            "voice": "de-DE-Journey-D"
+        },
+        "name": "German"
+    },
+    {
+        "id": "ru-ru",
+        "code": "ru",
+        "tts": {
+            "code": "ru-RU",
+            "voice": "ru-RU-Standard-A"
+        },
+        "name": "Russian"
+    },
+    {
+        "id": "kr-ko",
+        "code": "ko",
+        "tts": {
+            "code": "ko-KR",
+            "voice": "ko-KR-Neural2-A"
+        },
+        "name": "Korean"
+    },
+    {
+        "id": "jp-ja",
+        "code": "ja",
+        "tts": {
+            "code": "ja-JP",
+            "voice": "ja-JP-Neural2-B"
+        },
+        "name": "Japanese"
+    },
+    {
+        "id": "bg-bg",
+        "code": "bg",
+        "tts": {
+            "code": "bg-BG",
+            "voice": "bg-BG-Standard-A"
+        },
+        "name": "Bulgarian"
+    },
+    {
+        "id": "hk-zh-HK",
+        "code": "zh-HK",
+        "tts": {
+            "code": "yue-HK",
+            "voice": "yue-HK-Standard-A"
+        },
+        "name": "Chinese"
+    },
+    {
+        "id": "czech-cs",
+        "code": "cs",
+        "tts": {
+            "code": "cs-CZ",
+            "voice": "cs-CZ-Standard-A"
+        },
+        "name": "Czech"
+    },
+    {
+        "id": "dk-da-DK",
+        "code": "da-DK",
+        "tts": {
+            "code": "da-DK",
+            "voice": "da-DK-Neural2-D"
+        },
+        "name": "Danish"
+    },
+    {
+        "id": "nl-nl-1",
+        "code": "nl",
+        "tts": {
+            "code": "nl-NL",
+            "voice": "nl-NL-Standard-A"
+        },
+        "name": "Dutch"
+    },
+    {
+        "id": "nl-nl-2",
+        "code": "nl",
+        "tts": {
+            "code": "nl-BE",
+            "voice": "nl-BE-Standard-A"
+        },
+        "name": "Dutch"
+    },
+    {
+        "id": "fi-fi",
+        "code": "fi",
+        "tts": {
+            "code": "fi-FI",
+            "voice": "fi-FI-Standard-A"
+        },
+        "name": "Finnish"
+    },
+    {
+        "id": "ca-fr-CA",
+        "code": "fr-CA",
+        "tts": {
+            "code": "fr-CA",
+            "voice": "fr-CA-Journey-D"
+        },
+        "name": "French"
+    },
+    {
+        "id": "el-el",
+        "code": "el",
+        "tts": {
+            "code": "el-GR",
+            "voice": "el-GR-Standard-A"
+        },
+        "name": "Greek"
+    },
+    {
+        "id": "in-hi",
+        "code": "hi",
+        "tts": {
+            "code": "hi-IN",
+            "voice": "hi-IN-Neural2-A"
+        },
+        "name": "Hindi"
+    },
+    {
+        "id": "id-id",
+        "code": "id",
+        "tts": {
+            "code": "id-ID",
+            "voice": "id-ID-Wavenet-D"
+        },
+        "name": "Indonesian"
+    },
+    {
+        "id": "it-it",
+        "code": "it",
+        "tts": {
+            "code": "it-IT",
+            "voice": "it-IT-Journey-D"
+        },
+        "name": "Italian"
+    },
+    {
+        "id": "lv-lv",
+        "code": "lv",
+        "tts": {
+            "code": "lv-LV",
+            "voice": "lv-LV-Standard-A"
+        },
+        "name": "Latvian"
+    },
+    {
+        "id": "catalon-ca",
+        "code": "ca",
+        "tts": {
+            "code": "ca-ES",
+            "voice": "ca-ES-Standard-A"
+        },
+        "name": "Catalan"
+    },
+    {
+        "id": "lt-lt",
+        "code": "lt",
+        "tts": {
+            "code": "lt-LT",
+            "voice": "lt-LT-Standard-A"
+        },
+        "name": "Lithuanian"
+    },
+    {
+        "id": "ms-ms",
+        "code": "ms",
+        "tts": {
+            "code": "ms-MY",
+            "voice": "ms-MY-Standard-A"
+        },
+        "name": "Malay"
+    },
+    {
+        "id": "hu-hu",
+        "code": "hu",
+        "tts": {
+            "code": "hu-HU",
+            "voice": "hu-HU-Standard-A"
+        },
+        "name": "Hungarian"
+    },
+    {
+        "id": "zh",
+        "code": "zh",
+        "tts": {
+            "code": "cmn-CN",
+            "voice": "cmn-CN-Standard-A"
+        },
+        "name": "Mandarin"
+    },
+    {
+        "id": "no-no",
+        "code": "no",
+        "tts": {
+            "code": "nb-NO",
+            "voice": "nb-NO-Standard-A"
+        },
+        "name": "Norwegian"
+    },
+    {
+        "id": "pl-pl",
+        "code": "pl",
+        "tts": {
+            "code": "pl-PL",
+            "voice": "pl-PL-Standard-A"
+        },
+        "name": "Polish"
+    },
+    {
+        "id": "br-pt-BR",
+        "code": "pt-BR",
+        "tts": {
+            "code": "pt-BR",
+            "voice": "pt-BR-Neural2-A"
+        },
+        "name": "Portuguese"
+    },
+    {
+        "id": "pt-pt",
+        "code": "pt-PT",
+        "tts": {
+            "code": "pt-PT",
+            "voice": "pt-PT-Standard-A"
+        },
+        "name": "Portuguese"
+    },
+    {
+        "id": "ro-ro",
+        "code": "ro",
+        "tts": {
+            "code": "ro-RO",
+            "voice": "ro-RO-Wavenet-A"
+        },
+        "name": "Romanian"
+    },
+    {
+        "id": "sk-sk",
+        "code": "sk",
+        "tts": {
+            "code": "sk-SK",
+            "voice": "sk-SK-Standard-A"
+        },
+        "name": "Slovak"
+    },
+    {
+        "id": "se-sv",
+        "code": "sv",
+        "tts": {
+            "code": "sv-SE",
+            "voice": "sv-SE-Standard-B"
+        },
+        "name": "Swedish"
+    },
+    {
+        "id": "th-th",
+        "code": "th",
+        "tts": {
+            "code": "th-TH",
+            "voice": "th-TH-Neural2-C"
+        },
+        "name": "Thai"
+    },
+    {
+        "id": "tr-tr",
+        "code": "tr",
+        "tts": {
+            "code": "tr-TR",
+            "voice": "tr-TR-Standard-A"
+        },
+        "name": "Turkish"
+    },
+    {
+        "id": "ua-uk",
+        "code": "uk",
+        "tts": {
+            "code": "uk-UA",
+            "voice": "uk-UA-Standard-A"
+        },
+        "name": "Ukrainian"
+    },
+    {
+        "id": "vi-vi",
+        "code": "vi",
+        "tts": {
+            "code": "vi-VN",
+            "voice": "vi-VN-Neural2-A"
+        },
+        "name": "Vietnamese"
+    }
+]
