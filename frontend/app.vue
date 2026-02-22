@@ -2,51 +2,7 @@
   <div class="min-h-screen font-sans bg-gray-950 text-white overflow-x-hidden">
 
     <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-      :class="scrolled ? 'bg-gray-950/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-white/5' : 'bg-transparent'">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-2 group">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center shadow-lg shadow-violet-500/30 group-hover:scale-110 transition-transform">
-            <span class="text-white font-black text-sm">L</span>
-          </div>
-          <span class="text-xl font-extrabold tracking-tight">Luxe<span class="text-violet-400">Shop</span></span>
-        </a>
-
-        <!-- Desktop Nav -->
-        <div class="hidden md:flex items-center gap-8">
-          <a v-for="link in navLinks" :key="link.label" :href="link.href"
-            class="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group">
-            {{ link.label }}
-            <span class="absolute -bottom-1 left-0 w-0 h-px bg-violet-400 group-hover:w-full transition-all duration-300"></span>
-          </a>
-        </div>
-
-        <!-- Actions -->
-        <div class="flex items-center gap-3">
-          <button class="hidden md:flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          </button>
-          <button class="relative group p-2 text-gray-400 hover:text-white transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 7H4l1-7z"/></svg>
-            <span class="absolute -top-1 -right-1 w-4 h-4 bg-violet-500 text-white text-xs rounded-full flex items-center justify-center font-bold">3</span>
-          </button>
-          <button class="hidden md:block px-4 py-2 text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40 hover:scale-105 active:scale-95">
-            Sign In
-          </button>
-          <!-- Mobile Menu -->
-          <button @click="mobileMenu = !mobileMenu" class="md:hidden p-2 text-gray-400 hover:text-white">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div v-if="mobileMenu" class="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-white/5 px-6 py-4 flex flex-col gap-3">
-        <a v-for="link in navLinks" :key="link.label" :href="link.href" class="text-gray-300 hover:text-white text-sm font-medium py-2 border-b border-white/5">{{ link.label }}</a>
-        <button class="mt-2 w-full px-4 py-2 text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600">Sign In</button>
-      </div>
-    </nav>
+    <AppNavbar />
 
     <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
@@ -397,75 +353,13 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-white/5 bg-gray-900/50">
-      <div class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-5 gap-12">
-          <!-- Brand -->
-          <div class="md:col-span-2 space-y-5">
-            <div class="flex items-center gap-2">
-              <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center shadow-lg shadow-violet-500/30">
-                <span class="text-white font-black text-sm">L</span>
-              </div>
-              <span class="text-xl font-extrabold tracking-tight">Luxe<span class="text-violet-400">Shop</span></span>
-            </div>
-            <p class="text-gray-400 text-sm leading-relaxed max-w-xs">The premium online destination for curated products. Quality, trust, and value — guaranteed.</p>
-            <div class="flex gap-3">
-              <a v-for="social in socials" :key="social.label" href="#"
-                class="w-9 h-9 rounded-xl bg-gray-800 hover:bg-violet-600 border border-white/5 hover:border-transparent flex items-center justify-center text-gray-400 hover:text-white transition-all text-sm">
-                {{ social.icon }}
-              </a>
-            </div>
-          </div>
-
-          <div v-for="col in footerLinks" :key="col.title" class="space-y-4">
-            <h4 class="text-white font-bold text-sm">{{ col.title }}</h4>
-            <ul class="space-y-2.5">
-              <li v-for="link in col.links" :key="link">
-                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">{{ link }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Bottom -->
-        <div class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p class="text-gray-500 text-sm">© 2026 LuxeShop. All rights reserved.</p>
-          <div class="flex items-center gap-6">
-            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookies</a>
-          </div>
-          <div class="flex items-center gap-2 text-gray-500 text-xs">
-            <span>💳</span>
-            <span>Visa</span>
-            <span>Mastercard</span>
-            <span>PayPal</span>
-            <span>Apple Pay</span>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <AppFooter />
 
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-
-// Nav
-const scrolled = ref(false)
-const mobileMenu = ref(false)
-const handleScroll = () => { scrolled.value = window.scrollY > 20 }
-onMounted(() => window.addEventListener('scroll', handleScroll))
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))
-
-const navLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'Features', href: '#features' },
-  { label: 'Products', href: '#products' },
-  { label: 'Categories', href: '#categories' },
-  { label: 'Reviews', href: '#testimonials' },
-]
 
 // Hero
 const stats = [
@@ -563,20 +457,6 @@ const subscribe = () => {
   }
 }
 
-// Socials
-const socials = [
-  { label: 'Twitter', icon: '𝕏' },
-  { label: 'Instagram', icon: '📷' },
-  { label: 'Facebook', icon: '𝔽' },
-  { label: 'YouTube', icon: '▶' },
-]
-
-// Footer links
-const footerLinks = [
-  { title: 'Shop', links: ['New Arrivals', 'Best Sellers', 'Sale Items', 'Gift Cards', 'All Categories'] },
-  { title: 'Company', links: ['About Us', 'Careers', 'Press', 'Blog', 'Partners'] },
-  { title: 'Help', links: ['FAQ', 'Shipping Info', 'Returns', 'Track Order', 'Contact Us'] },
-]
 </script>
 
 <style>
