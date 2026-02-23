@@ -113,7 +113,7 @@
     <!-- MARQUEE BRANDS -->
     <div class="relative py-6 bg-gray-900/50 border-y border-white/5 overflow-hidden">
       <div class="flex gap-16 marquee-track">
-        <span v-for="brand in brands.concat(brands)" :key="Math.random()"
+        <span v-for="(brand, index) in brands.concat(brands)" :key="index"
           class="whitespace-nowrap text-gray-500 font-bold text-lg tracking-widest uppercase hover:text-gray-300 transition-colors cursor-default">
           {{ brand }}
         </span>
@@ -497,6 +497,7 @@ html {
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
