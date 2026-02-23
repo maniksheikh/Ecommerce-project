@@ -50,7 +50,6 @@
           <div class="relative w-full">
             <!-- Glow ring -->
             <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 blur-2xl scale-110"></div>
-
             <!-- Main card -->
             <div class="relative rounded-3xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 border border-white/10 backdrop-blur-sm overflow-hidden p-8 shadow-2xl">
               <!-- Product showcase grid -->
@@ -66,7 +65,6 @@
                   <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-300">{{ item.badge }}</span>
                 </div>
               </div>
-
               <!-- Bottom bar -->
               <div class="mt-6 flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5">
                 <div>
@@ -82,7 +80,6 @@
                 <div class="text-xs text-gray-400">+12k buyers</div>
               </div>
             </div>
-
             <!-- Floating badges -->
             <div class="absolute -top-4 -right-4 px-3 py-1.5 bg-green-500 text-white text-xs font-bold rounded-xl shadow-lg shadow-green-500/30 animate-bounce">
               ✈️ Free Shipping
@@ -93,14 +90,12 @@
           </div>
         </div>
       </div>
-
       <!-- Scroll indicator -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 animate-bounce">
         <span class="text-xs font-medium">Scroll</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
       </div>
     </section>
-
     <!-- MARQUEE BRANDS -->
     <div class="relative py-6 bg-gray-900/50 border-y border-white/5 overflow-hidden">
       <div class="flex gap-16 marquee-track">
@@ -110,7 +105,6 @@
         </span>
       </div>
     </div>
-
     <!-- FEATURES -->
     <section id="features" class="py-28 px-6 relative">
       <div class="max-w-7xl mx-auto">
@@ -119,7 +113,6 @@
           <h2 class="text-4xl md:text-5xl font-black text-white">Everything you <span class="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">need</span></h2>
           <p class="text-gray-400 max-w-xl mx-auto">We've built the ultimate shopping experience with features that matter most to our customers.</p>
         </div>
-
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div v-for="feature in features" :key="feature.title"
             class="group relative p-6 rounded-2xl bg-gray-900/60 border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10 cursor-default">
@@ -133,7 +126,6 @@
         </div>
       </div>
     </section>
-
     <!-- CATEGORIES -->
     <section id="categories" class="py-20 px-6 bg-gray-900/30">
       <div class="max-w-7xl mx-auto">
@@ -147,7 +139,6 @@
             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
-
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           <div v-for="cat in categories" :key="cat.name"
             class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square flex flex-col items-center justify-center gap-3 p-4 border border-white/5 hover:border-white/20 transition-all duration-300 hover:-translate-y-1"
