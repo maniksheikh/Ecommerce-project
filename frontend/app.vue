@@ -1,9 +1,7 @@
 <template>
   <div class="min-h-screen font-sans bg-gray-950 text-white overflow-x-hidden">
-
     <!-- NAVBAR -->
     <AppNavbar />
-
     <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
       <!-- Background -->
@@ -13,11 +11,9 @@
         <!-- Grid -->
         <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
       </div>
-
       <!-- Floating orbs -->
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl animate-pulse"></div>
       <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-fuchsia-600/10 rounded-full blur-3xl animate-pulse" style="animation-delay:1s"></div>
-
       <div class="relative w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center py-20">
         <!-- Left: Text -->
         <div class="text-center lg:text-left space-y-8">
@@ -25,16 +21,13 @@
             <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
             New Collection 2026 — Live Now
           </div>
-
           <h1 class="text-4xl md:text-5xl xl:text-[64px] font-black leading-2 tracking-tight">
             <span class="block text-white">Discover <span class="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">Premium</span></span>
             <span class="block text-white mt-1">Products</span>
           </h1>
-
           <p class="text-lg text-gray-400 max-w-md mx-auto lg:mx-0 leading-relaxed">
             Explore thousands of curated, high-quality products from top brands. Unbeatable prices, lightning-fast delivery, and world-class customer service.
           </p>
-
           <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
             <a href="#products" class="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-bold rounded-2xl shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 transition-all duration-300 hover:scale-105 active:scale-95">
               Shop Now
@@ -44,7 +37,6 @@
               Explore More
             </a>
           </div>
-
           <!-- Stats -->
           <div class="flex flex-wrap gap-8 justify-center lg:justify-start pt-4">
             <div v-for="stat in stats" :key="stat.label" class="text-center lg:text-left">
@@ -53,7 +45,6 @@
             </div>
           </div>
         </div>
-
         <!-- Right: Hero Visual -->
         <div class="relative flex justify-center items-center">
           <div class="relative w-full">
