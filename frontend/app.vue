@@ -197,8 +197,7 @@
             <!-- Info -->
             <div class="p-4 space-y-2">
               <p class="text-xs text-violet-400 font-semibold uppercase tracking-wider">{{ product.category }}</p>
-              <h3 class="text-white font-semibold text-sm leading-snug group-hover:text-violet-300 transition-colors line-clamp-2">{{ product.name }}</h3>
-              
+              <h3 class="text-white font-semibold text-sm leading-snug group-hover:text-violet-300 transition-colors line-clamp-2">{{ product.name }}</h3>             
               <!-- Stars -->
               <div class="flex items-center gap-1">
                 <div class="flex text-amber-400 text-xs">
@@ -206,7 +205,6 @@
                 </div>
                 <span class="text-xs text-gray-500">({{ product.reviews }})</span>
               </div>
-
               <div class="flex items-center justify-between pt-1">
                 <div class="flex items-center gap-2">
                   <span class="text-lg font-black text-white">${{ product.price }}</span>
@@ -219,7 +217,6 @@
             </div>
           </div>
         </div>
-
         <div class="text-center mt-12">
           <button class="group inline-flex items-center gap-3 px-10 py-4 border border-violet-500/30 hover:border-violet-500 text-violet-300 hover:text-white font-bold rounded-2xl bg-violet-500/5 hover:bg-violet-500/10 transition-all duration-300">
             Load More Products
