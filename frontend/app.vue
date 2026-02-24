@@ -300,7 +300,6 @@
         </div>
       </div>
     </section>
-
     <!-- NEWSLETTER -->
     <section class="py-20 px-6">
       <div class="max-w-2xl mx-auto text-center space-y-6">
@@ -321,10 +320,8 @@
         <div v-if="subscribed" class="text-green-400 text-sm font-medium animate-pulse">✓ Thanks for subscribing! Check your inbox.</div>
       </div>
     </section>
-
     <!-- FOOTER -->
     <AppFooter />
-
   </div>
 </template>
 
