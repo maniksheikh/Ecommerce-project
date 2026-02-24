@@ -225,7 +225,6 @@
         </div>
       </div>
     </section>
-
     <!-- PROMO BANNER -->
     <section class="py-16 px-6">
       <div class="max-w-7xl mx-auto">
@@ -258,7 +257,6 @@
         </div>
       </div>
     </section>
-
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="py-28 px-6 bg-gray-900/30">
       <div class="max-w-7xl mx-auto">
@@ -267,7 +265,6 @@
           <h2 class="text-4xl md:text-5xl font-black text-white">What our <span class="bg-gradient-to-r from-pink-400 to-fuchsia-400 bg-clip-text text-transparent">customers</span> say</h2>
           <p class="text-gray-400 max-w-xl mx-auto">Join over 50,000 satisfied customers who love shopping with us.</p>
         </div>
-
         <div class="grid md:grid-cols-3 gap-6">
           <div v-for="testimonial in testimonials" :key="testimonial.name"
             class="relative p-6 rounded-2xl bg-gray-900/80 border border-white/5 hover:border-violet-500/20 transition-all duration-300 hover:-translate-y-1 space-y-4">
@@ -293,7 +290,6 @@
             </div>
           </div>
         </div>
-
         <!-- Trust indicators -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           <div v-for="trust in trustBadges" :key="trust.label" class="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-gray-900/40 border border-white/5">
