@@ -50,6 +50,7 @@ app.use(
 
 app.use("/api/person", require("./api/person"));
 app.use("/api/invoice", require("./api/invoice"));
+app.use("/api/products", require("./api/products"));
 
 // Update the global error handling middleware
 app.use((err, req, res, next) => {
