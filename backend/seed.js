@@ -309,17 +309,11 @@ async function seed() {
         const connection = await getMongoConnection();
         client = connection.client;
         db = connection.db;
-
         console.log('Connected to MongoDB for seeding...');
-
-        // Clear existing products
         await db.collection('products').deleteMany({});
         console.log('Cleared existing products.');
-
-        // Insert sample products
         const result = await db.collection('products').insertMany(sampleProducts);
         console.log(`${result.insertedCount} products seeded successfully!`);
-
     } catch (error) {
         console.error('Error seeding data:', error);
     } finally {
