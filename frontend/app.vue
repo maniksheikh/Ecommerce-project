@@ -150,7 +150,6 @@
         </div>
       </div>
     </section>
-
     <!-- FEATURED PRODUCTS -->
     <section id="products" class="py-28 px-6">
       <div class="max-w-7xl mx-auto">
@@ -169,7 +168,6 @@
             </button>
           </div>
         </div>
-
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div v-for="product in filteredProducts" :key="product._id"
             class="group relative rounded-2xl bg-gray-900/60 border border-white/5 hover:border-violet-500/20 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/10"> 
@@ -395,6 +393,7 @@ const countdown = ref([
   { label: 'Minutes', value: '47' },
   { label: 'Seconds', value: '32' },
 ])
+
 let timer = null
 onMounted(() => {
   let secs = 11 * 3600 + 47 * 60 + 32
