@@ -171,15 +171,15 @@
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div v-for="product in filteredProducts" :key="product.id"
+          <div v-for="product in filteredProducts" :key="product._id"
             class="group relative rounded-2xl bg-gray-900/60 border border-white/5 hover:border-violet-500/20 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/10"> 
             <!-- Image area -->
             <div class="relative aspect-square overflow-hidden flex items-center justify-center"
-              :class="product.imageBg">
-              <span class="text-7xl group-hover:scale-110 transition-transform duration-500">{{ product.emoji }}</span>
+              :class="product.imageBg || 'bg-gradient-to-br from-violet-900/40 to-fuchsia-900/40'">
+              <span class="text-7xl group-hover:scale-110 transition-transform duration-500">{{ product.emoji || '📦' }}</span>
               <!-- Badges -->
               <div class="absolute top-3 left-3 flex flex-col gap-1">
-                <span v-if="product.badge" class="text-xs font-bold px-2 py-0.5 rounded-lg" :class="product.badgeClass">
+                <span v-if="product.badge" class="text-xs font-bold px-2 py-0.5 rounded-lg" :class="product.badgeClass || 'bg-violet-600 text-white'">
                   {{ product.badge }}
                 </span>
               </div>
@@ -201,9 +201,9 @@
               <!-- Stars -->
               <div class="flex items-center gap-1">
                 <div class="flex text-amber-400 text-xs">
-                  <span v-for="n in 5" :key="n">{{ n <= product.rating ? '★' : '☆' }}</span>
+                  <span v-for="n in 5" :key="n">{{ n <= (product.rating || 5) ? '★' : '☆' }}</span>
                 </div>
-                <span class="text-xs text-gray-500">({{ product.reviews }})</span>
+                <span class="text-xs text-gray-500">({{ product.reviews || '0' }})</span>
               </div>
               <div class="flex items-center justify-between pt-1">
                 <div class="flex items-center gap-2">
@@ -364,20 +364,29 @@ const categories = [
 ]
 
 // Products
-const filterTabs = ['All', 'Electronics', 'Fashion', 'Footwear', 'Beauty']
+const filterTabs = ['All', 'Electronics', 'Fashion', 'Footwear', 'Beauty', 'Home', 'Sports']
 const activeTab = ref('All')
-const allProducts = [
-  { id:1, name:'AirPods Pro Max — Active Noise Cancellation', category:'Electronics', emoji:'🎧', price:'249', originalPrice:'299', badge:'Sale', badgeClass:'bg-red-500/80 text-white', imageBg:'bg-gradient-to-br from-blue-900/40 to-violet-900/40', rating:5, reviews:'1.2k', tab:'Electronics' },
-  { id:2, name:'Nike Air Max 2026 Running Shoes', category:'Footwear', emoji:'👟', price:'129', originalPrice:null, badge:'New', badgeClass:'bg-green-500/80 text-white', imageBg:'bg-gradient-to-br from-orange-900/30 to-red-900/30', rating:4, reviews:'896', tab:'Footwear' },
-  { id:3, name:'Galaxy S25 Ultra Smartphone 512GB', category:'Electronics', emoji:'📱', price:'999', originalPrice:'1199', badge:'Hot', badgeClass:'bg-orange-500/80 text-white', imageBg:'bg-gradient-to-br from-gray-800/60 to-gray-900/60', rating:5, reviews:'2.1k', tab:'Electronics' },
-  { id:4, name:'Leather Crossbody Handbag — Premium', category:'Fashion', emoji:'👜', price:'89', originalPrice:null, badge:null, badgeClass:'', imageBg:'bg-gradient-to-br from-amber-900/30 to-yellow-900/30', rating:4, reviews:'544', tab:'Fashion' },
-  { id:5, name:'Apple Watch Ultra 2 — Titanium Case', category:'Electronics', emoji:'⌚', price:'799', originalPrice:'899', badge:'Sale', badgeClass:'bg-red-500/80 text-white', imageBg:'bg-gradient-to-br from-gray-800/60 to-slate-900/60', rating:5, reviews:'3.4k', tab:'Electronics' },
-  { id:6, name:'Floral Maxi Dress — Summer Collection', category:'Fashion', emoji:'👗', price:'59', originalPrice:'79', badge:'Sale', badgeClass:'bg-pink-500/80 text-white', imageBg:'bg-gradient-to-br from-pink-900/30 to-fuchsia-900/30', rating:4, reviews:'321', tab:'Fashion' },
-  { id:7, name:'Adidas Ultraboost 24 Performance', category:'Footwear', emoji:'🥿', price:'169', originalPrice:null, badge:'New', badgeClass:'bg-green-500/80 text-white', imageBg:'bg-gradient-to-br from-green-900/30 to-teal-900/30', rating:4, reviews:'678', tab:'Footwear' },
-  { id:8, name:'Luxury Skincare Gift Set — 12 Pieces', category:'Beauty', emoji:'🧴', price:'79', originalPrice:'120', badge:'Sale', badgeClass:'bg-red-500/80 text-white', imageBg:'bg-gradient-to-br from-rose-900/30 to-pink-900/40', rating:5, reviews:'892', tab:'Beauty' },
-]
+const allProducts = ref([])
+
+const fetchProducts = async () => {
+  try {
+    const { data, error } = await useFetch('http://localhost:3001/api/products')
+    if (data.value && data.value.success) {
+      allProducts.value = data.value.data
+    } else if (error.value) {
+      console.error('Error fetching products:', error.value)
+    }
+  } catch (err) {
+    console.error('Fetch error:', err)
+  }
+}
+
+onMounted(() => {
+  fetchProducts()
+})
+
 const filteredProducts = computed(() =>
-  activeTab.value === 'All' ? allProducts : allProducts.filter(p => p.tab === activeTab.value)
+  activeTab.value === 'All' ? allProducts.value : allProducts.value.filter(p => p.category === activeTab.value)
 )
 
 // Countdown (static demo)
