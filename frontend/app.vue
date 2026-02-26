@@ -47,11 +47,9 @@
         <!-- Right: Hero Visual -->
         <div class="relative flex justify-center items-center">
           <div class="relative w-full">
-            <!-- Glow ring -->
             <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 blur-2xl scale-110"></div>
             <!-- Main card -->
             <div class="relative rounded-3xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 border border-white/10 backdrop-blur-sm overflow-hidden p-8 shadow-2xl">
-              <!-- Product showcase grid -->
               <div class="grid grid-cols-2 gap-4">
                 <div v-for="(item, i) in heroProducts" :key="i"
                   class="group rounded-2xl p-5 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all duration-300 hover:scale-105"
