@@ -175,17 +175,14 @@
             <div class="relative aspect-square overflow-hidden flex items-center justify-center"
               :class="product.imageBg || 'bg-gradient-to-br from-violet-900/40 to-fuchsia-900/40'">
               <span class="text-7xl group-hover:scale-110 transition-transform duration-500">{{ product.emoji || '📦' }}</span>
-              <!-- Badges -->
               <div class="absolute top-3 left-3 flex flex-col gap-1">
                 <span v-if="product.badge" class="text-xs font-bold px-2 py-0.5 rounded-lg" :class="product.badgeClass || 'bg-violet-600 text-white'">
                   {{ product.badge }}
                 </span>
               </div>
-              <!-- Wishlist -->
               <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-red-400 hover:bg-white/20 transition-all opacity-0 group-hover:opacity-100">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
               </button>
-              <!-- Quick add -->
               <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <button class="w-full py-2 bg-violet-600 hover:bg-violet-500 text-white text-xs font-bold rounded-xl transition-colors">
                   Quick Add to Cart
