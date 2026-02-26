@@ -8,7 +8,6 @@
       <div class="absolute inset-0 bg-gray-950">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,60,200,0.25),transparent)]"></div>
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_80%_80%,rgba(217,70,239,0.1),transparent)]"></div>
-        <!-- Grid -->
         <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
       </div>
       <!-- Floating orbs -->
@@ -263,7 +262,6 @@
         <div class="grid md:grid-cols-3 gap-6">
           <div v-for="testimonial in testimonials" :key="testimonial.name"
             class="relative p-6 rounded-2xl bg-gray-900/80 border border-white/5 hover:border-violet-500/20 transition-all duration-300 hover:-translate-y-1 space-y-4">
-            <!-- Quote -->
             <div class="text-4xl text-violet-400/30 font-serif leading-none">"</div>
             <!-- Stars -->
             <div class="flex text-amber-400 text-sm">
