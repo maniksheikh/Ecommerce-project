@@ -190,7 +190,6 @@
             <div class="p-4 space-y-2">
               <p class="text-xs text-violet-400 font-semibold uppercase tracking-wider">{{ product.category }}</p>
               <h3 class="text-white font-semibold text-sm leading-snug group-hover:text-violet-300 transition-colors line-clamp-2">{{ product.name }}</h3>             
-              <!-- Stars -->
               <div class="flex items-center gap-1">
                 <div class="flex text-amber-400 text-xs">
                   <span v-for="n in 5" :key="n">{{ n <= (product.rating || 5) ? '★' : '☆' }}</span>
