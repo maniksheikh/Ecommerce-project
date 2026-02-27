@@ -48,7 +48,7 @@ app.use(
     })
 );
 
-// app.use("/api/persion", require("./api/persion"));
+app.use("/api/persion", require("./api/persion"));
 // app.use("/api/invoice", require("./api/invoice"));
 app.use("/api/products", require("./api/products"));
 
